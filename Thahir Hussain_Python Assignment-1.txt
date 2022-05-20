@@ -1,0 +1,150 @@
+
+#Problem - 1
+
+waterLevel=int(input("Enter the water level: "))
+
+if waterLevel > 80:
+    print("Turn off motor")
+elif waterLevel >=20 and waterLevel <=80:
+    print("Motor was idle state")
+elif waterLevel<20:
+    print("Turn on the motor")
+
+
+#Problem - 2
+
+while True:
+    password =int(input("Enter the password: "))
+    if password==1234:
+        fanStatus=int(input("Enter the fan status(1-turn on/0-turn off): "))
+        if fanStatus==1:
+            print("Turn the fan")
+            break
+        elif fanStatus==0:
+            print("Turn off the fan")
+            break
+        else:
+            print("You entered wrong choice")
+            break
+    else:
+         print("You entered wrong password!.Try again")
+
+
+
+#Problem - 3
+
+count=0
+
+for number in range(100,1,-1):
+    if(number%3==0):
+        print(number,end="\t")
+        count+=1
+
+print("\nCount the numbers which is divisible by 3: ",count)
+
+
+
+#Problem - 4
+
+
+def isEven(number):
+    isEven=True
+    
+    for number in range(1,number+1):
+        if isEven==True:
+           isEven=False
+        else:
+            isEven=True
+    return isEven        
+             
+            
+evenNumber=[]
+oddNumber=[]
+for number in range(1,20):
+    if(isEven(number)):
+        evenNumber.append(number)
+    else:
+        oddNumber.append(number)
+
+
+print(evenNumber)
+print(oddNumber)
+
+
+#Problem - 5
+
+class Employee:
+    def __init__(self,emp_Id,emp_Name,emp_Email,emp_Phone_No,emp_Salary,emp_Gender,emp_City):
+        self.emp_Id=emp_Id
+        self.emp_Name=emp_Name
+        self.emp_Email=emp_Email
+        self.emp_Phone_No=emp_Phone_No
+        self.emp_Salary=emp_Salary
+        self.emp_Gender=emp_Gender
+        self.emp_City=emp_City
+
+    def display(self):
+        print(self.emp_Id,self.emp_Name,self.emp_Email,self.emp_Phone_No,self.emp_Salary,self.emp_Gender,self.emp_City)
+
+
+employee=Employee(101,"Thahir Hussain","thahirhussain1414@gmail.com",9994473811,30000,"MALE","Madurai")
+employee.display()
+
+#Program - 6
+
+class Employee:
+        emp_Id=0
+        emp_Name="undefined"
+        emp_Email="undefined"
+        emp_Phone_No="undefined"
+        emp_Salary=0
+        emp_Gender="undefined"
+        emp_City="undefined"
+
+        def getDetails(self):
+            self.emp_Id=int(input("Enter the employee Id: "))
+            self.emp_Name=input("Enter the name: ")
+            self.emp_Email=input("Enter the email: ")
+            self.emp_Phone_No=input("Enter the phone number: ")
+            self.emp_Salary=int(input("Enter the salary: "))
+            self.emp_Gender=input("Enter the gender: ")
+            self.emp_City=input("Enter the city: ")
+
+
+        def display(self):
+            print(self.emp_Id,self.emp_Name,self.emp_Email,self.emp_Phone_No,self.emp_Salary,self.emp_Gender,self.emp_City)
+
+
+employee=Employee()
+employee.getDetails()
+employee.display()
+
+
+#Program - 7
+
+def isEligible(age):
+    if age<18:
+        print("You are not eligible to vote.")
+    else:
+        print("You were eligible to vote.")
+
+age=int(input("Enter the age: "))
+isEligible(age)
+
+
+#Program 8
+x=100
+def fun():
+   global x
+   x=20
+   print(x)
+
+fun()
+print(x)
+      
+
+            
+    
+
+
+    
